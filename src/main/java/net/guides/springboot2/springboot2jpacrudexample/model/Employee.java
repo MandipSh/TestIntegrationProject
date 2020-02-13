@@ -20,17 +20,25 @@ public class Employee {
 		
 	}
 	
-	public Employee(String firstName, String lastName, String emailId) {
+	public Employee(long id, String firstName, String lastName, String emailId) {
+		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.emailId = emailId;
 	}
 	
+	/*
+	 * @Id
+	 * 
+	 * @GeneratedValue(strategy = GenerationType.AUTO) public long getId() { return
+	 * id; }
+	 */
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id", nullable = false)
 	public long getId() {
 		return id;
 	}
+	
 	public void setId(long id) {
 		this.id = id;
 	}

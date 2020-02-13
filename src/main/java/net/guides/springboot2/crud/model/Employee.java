@@ -20,7 +20,8 @@ public class Employee {
   
     }
  
-    public Employee(String firstName, String lastName, String emailId) {
+    public Employee(long id, String firstName, String lastName, String emailId) {
+    	 this.id = id;
          this.firstName = firstName;
          this.lastName = lastName;
          this.emailId = emailId;
