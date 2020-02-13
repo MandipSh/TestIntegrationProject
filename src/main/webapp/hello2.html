@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="demo2">
+<head>
+<title>Hello AngularJS</title>
+<style>
+div {
+	transition: all linear 0.5s;
+	background-color: lightblue;
+	height: 100px;
+	width: 50%;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+</style>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script src="hello2ang.js"></script>
+</head>
+
+<body>
+	<div ng-controller="myCtrl">
+		<div ng-repeat="myWelcome in myWelcome">
+			<p>The ID is {{myWelcome.id}}</p>
+			<p>The content is {{myWelcome.lastName}}</p>
+		</div>
+	</div>
+</body>
+</html>
